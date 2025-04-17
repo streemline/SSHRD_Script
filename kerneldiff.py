@@ -22,11 +22,11 @@ if __name__ == "__main__":
 		originalByte = o[i]
 		patchedByte = p[i]
 		if originalByte != patchedByte:
-			diff.append([hex(i),hex(originalByte), hex(patchedByte)])	
+			diff.append([hex(i),hex(originalByte), hex(patchedByte)])
 	diffFile = open(args[3], 'w+')
 	diffFile.write('#AMFI\n\n')
 	for d in diff:
-		data = str(d[0]) + " " + (str(d[1])) + " " + (str(d[2]))
+		data = f"{str(d[0])} {str(d[1])} {str(d[2])}"
 		diffFile.write(data+ '\n')
 		print(data)
 	
